@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import {Typography,TextField,makeStyles,Slider} from '@material-ui/core';
+const value={
+  Char_Limit:0,
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Typography>Website builder</Typography>
+      <TextField id='charLimit' variant="outlined"
+    Char_Limit="number"
+      />
+     
+      <Slider defaultValue={50} aria-label="small" valueLabelDisplay="auto" />
     </div>
   );
 }
